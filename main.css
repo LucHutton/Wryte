@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --text-grey: #343a40;
+  font-size: 24px;
+  display: flex;
+  color: var(--text-grey);
+  font-family: georgia;
+
+}
+
+body{
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  padding: 0;
+}
+
+[contenteditable]:focus{
+  outline: 0px solid transparent;
+}
+
+section{
+  margin-top: 50px;
+}
+
+p{
+  font-size: 18px;
+  color: black;
+  vertical-align: center;
+  font-weight: 500;
+  font-family: corbel;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+}
+
+#clearText{
+  cursor: pointer;
+}
