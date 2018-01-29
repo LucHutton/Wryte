@@ -27,9 +27,8 @@ section{
 }
 
 p{
-  font-size: 18px;
+  font-size: 0.75rem;
   color: black;
-  vertical-align: center;
   font-weight: 500;
   font-family: corbel;
   margin: 30px;
@@ -41,6 +40,12 @@ nav{
   flex-direction: row;
 }
 
-#clearText{
+#clearText,#githubLink{
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  p{
+    font-size: 16px;
+  }
 }

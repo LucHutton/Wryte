@@ -8,7 +8,8 @@ function loadPrevious(){
 
 setInterval(function() {
   var words = document.getElementsByTagName('section')["0"].innerText;
-  let wordsArray = words.split(" ");
+  wordsFlat = words.replace(/\s+/g," ").trim();
+  let wordsArray = wordsFlat.split(" ");
   let wordAmount = wordsArray.length;
   let wordCounter = document.getElementById('wordCount');
   let count = document.createTextNode(`words: ${wordAmount}`);
