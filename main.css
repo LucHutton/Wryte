@@ -1,9 +1,11 @@
-:root{
+html{
   --text-grey: #343a40;
+  --back-colour: #fff;
   font-size: 24px;
   display: flex;
   color: var(--text-grey);
   font-family: georgia,serif;
+  background-color: var(--back-colour);
 
 }
 
@@ -16,29 +18,29 @@ body{
   outline: 0px solid transparent;
 }
 
-section{
+[contenteditable]{
   margin-top: 50px;
 }
 
 p{
   font-size: 0.75rem;
-  color: black;
   font-weight: 500;
   font-family: corbel,sans-serif;
-  margin: 30px;
+  margin: 20px;
   margin-right: 10px;
+  margin-bottom: 0;
 }
 
 nav{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
-#clearText,#githubLink{
+#clearText,#githubLink,.white,.black,.zenOn,.zenOff{
   cursor: pointer;
 }
-
-@media (max-width: 420px) {
+@media (max-width: 520px) {
   p{
     font-size: 16px;
   }

@@ -1,0 +1,8 @@
+p{
+  display: none;
+  color: #343a40!important;
+}
+
+@page{
+  size: A4 portrait;
+}

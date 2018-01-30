@@ -5,6 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="main.css" />
+      <link rel="stylesheet" href="print.css" media="print" />
       <link rel="icon" href="icon.ico" />
       <script type="text/javascript" src="main.js"></script>
     </head>
@@ -26,5 +27,27 @@
           github
         </p>
       </nav>
+      <nav id="themes">
+        <p id="theme">
+          theme:
+          <p class = "white" onclick="toWhite()">
+            light
+          </p>
+          <p class = "black" onclick="toBlack()">
+            dark
+          </p>
+        </p>
+      </nav>
+      <nav id="zenMode">
+      <p>
+        zen mode:
+        <p class="zenOn" onclick="zenOn()">
+          on
+        </p>
+        <p class="zenOff" onclick="zenOff()">
+          off
+        </p>
+      </p>
+    </nav>
     </body>
   </html>
