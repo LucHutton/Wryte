@@ -1,21 +1,15 @@
-*{
-  padding: 0;
-  margin: 0;
-}
 :root{
   --text-grey: #343a40;
   font-size: 24px;
   display: flex;
   color: var(--text-grey);
-  font-family: georgia;
+  font-family: georgia,serif;
 
 }
 
 body{
   width: 90%;
   margin: auto;
-  justify-content: center;
-  padding: 0;
 }
 
 [contenteditable]:focus{
@@ -30,7 +24,7 @@ p{
   font-size: 0.75rem;
   color: black;
   font-weight: 500;
-  font-family: corbel;
+  font-family: corbel,sans-serif;
   margin: 30px;
   margin-right: 10px;
 }
