@@ -1,4 +1,4 @@
-var theme = "light";
+var themeType = "light";
 
 function loadPrevious(){
   if (localStorage.getItem("section-contents") == ""){
@@ -9,15 +9,15 @@ function loadPrevious(){
 }
 
 setInterval(function() {
-  var words = document.getElementsByTagName('section')["0"].innerText;
-  wordsFlat = words.replace(/\s+/g," ").trim();
-  let wordsArray = wordsFlat.split(" ");
-  let wordAmount = wordsArray.length;
+  var contenteditableContent = document.getElementsByTagName('section')["0"].innerText;
+  contenteditableContentFlat = contenteditableContent.replace(/\s+/g," ").trim();
+  let contenteditableContentArray = contenteditableContentFlat.split(" ");
+  let wordAmount = contenteditableContentArray.length;
   let wordCounter = document.getElementById('wordCount');
   let count = document.createTextNode(`words: ${wordAmount}`);
   wordCounter.replaceChild(count, wordCounter.childNodes[0]);
 
-  localStorage.setItem("section-contents",words);
+  localStorage.setItem("section-contents",contenteditableContent);
 }, 3000);
 
 function clearText(){
@@ -26,14 +26,14 @@ function clearText(){
 }
 
 function toWhite(){
-  theme = "light";
+  themeType = "light";
   let root = document.getElementsByTagName('html')[0];
   root.style.setProperty("background-color", "white");
   root.style.setProperty("color", "#343a40");
 }
 
 function toBlack(){
-  theme = "dark";
+  themeType = "dark";
   let root = document.getElementsByTagName('html')[0];
   root.style.setProperty("background-color", "#343a40");
   root.style.setProperty("color", "white");
