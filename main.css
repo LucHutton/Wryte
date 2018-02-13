@@ -37,7 +37,7 @@ nav{
   flex-direction: row;
 }
 
-#clearText,#githubLink,.white,.black,.zenOn,.zenOff{
+#clearText,#githubLink,.white,.black,#zen-toggle{
   cursor: pointer;
 }
 @media (max-width: 520px) {
