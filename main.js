@@ -1,38 +1,38 @@
 var themeType = "light";
 
-function loadPrevious(){
-  if (localStorage.getItem("section-contents") == ""){
+function loadPrevious() {
+  if (localStorage.getItem("section-contents") == "") {
     document.getElementsByTagName('section')["0"].innerText = "Write whatever...";
-  } else{
-  document.getElementsByTagName('section')["0"].innerText = localStorage.getItem("section-contents");
-}
+  } else {
+    document.getElementsByTagName('section')["0"].innerText = localStorage.getItem("section-contents");
+  }
 }
 
-setInterval(function() {
+setInterval(function () {
   var contenteditableContent = document.getElementsByTagName('section')["0"].innerText;
-  contenteditableContentFlat = contenteditableContent.replace(/\s+/g," ").trim();
+  contenteditableContentFlat = contenteditableContent.replace(/\s+/g, " ").trim();
   let contenteditableContentArray = contenteditableContentFlat.split(" ");
   let wordAmount = contenteditableContentArray.length;
   let wordCounter = document.getElementById('wordCount');
   let count = document.createTextNode(`words: ${wordAmount}`);
   wordCounter.replaceChild(count, wordCounter.childNodes[0]);
 
-  localStorage.setItem("section-contents",contenteditableContent);
+  localStorage.setItem("section-contents", contenteditableContent);
 }, 3000);
 
-function clearText(){
+function clearText() {
   let section = document.getElementsByTagName('section')["0"];
   section.innerText = "";
 }
 
-function toWhite(){
+function toWhite() {
   themeType = "light";
   let root = document.getElementsByTagName('html')[0];
   root.style.setProperty("background-color", "white");
   root.style.setProperty("color", "#343a40");
 }
 
-function toBlack(){
+function toBlack() {
   themeType = "dark";
   let root = document.getElementsByTagName('html')[0];
   root.style.setProperty("background-color", "#343a40");
@@ -41,20 +41,20 @@ function toBlack(){
 
 function zenOn() {
   let ps = document.getElementsByTagName('p');
-  for(let i = 1; i < ps.length; i++){
-    if (i === 3){
+  for (let i = 1; i < ps.length; i++) {
+    if (i === 3) {
       continue;
-    } else{
-    let psi = ps[i];
-    psi.setAttribute("style", "display:" + "none")
+    } else {
+      let psi = ps[i];
+      psi.setAttribute("style", "display:" + "none")
     }
   }
-  
+
   let toggle = document.getElementById("zen-toggle");
   toggle.setAttribute("onclick", "zenOff()");
 }
 
-function zenOff(){
+function zenOff() {
   let ps = document.getElementsByTagName('p');
   for (let i = 0; i < ps.length; i++) {
     let psi = ps[i];
