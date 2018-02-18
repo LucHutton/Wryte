@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114069415-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<html>
 
-        gtag('config', 'UA-114069415-1');
-      </script>
-      <title>Wryte</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="main.css" />
-      <link rel="stylesheet" href="print.css" media="print" />
-      <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
-<!-- <script type="text/javascript" src="main.js" async></script> -->
-    </head>
-    <body onload="loadPrevious()">
-      <section contenteditable="true">
-        Write whatever...
-      </section>
-      <nav id="tabs">
+<head>
+  <title>Wryte</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="print.css" media="print" />
+  <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+  <script type="text/javascript" src="main.js" async></script>
+</head>
 
-      </nav>
-      <nav id="info">
-        <p id="wordCount">
-          words: 0
-        </p>
-        <p id="clearText" onclick="clearText()">
-          clear text
-        </p>
-        <p id="githubLink" onclick="location.href = 'https://github.com/LucHutton/wryte'">
-          github
-        </p>
-        <p id="zen-toggle" onclick="zenOn()">
-          zen
-        </p>
-      </nav>
-      <nav id="themes">
-        <p id="theme">
-          theme:
-          <p class = "white" onclick="toWhite()">
-            light
-          </p>
-          <p class = "black" onclick="toBlack()">
-            dark
-          </p>
-        </p>
-      </nav>
-    </body>
-  </html>
+<body onload="loadPrevious()">
+  <section contenteditable="true">
+    Write whatever...
+  </section>
+  <nav id="tabs">
+
+  </nav>
+  <nav id="info">
+    <p id="wordCount">
+      words: 0
+    </p>
+    <p id="clearText" onclick="clearText()">
+      clear text
+    </p>
+    <p id="githubLink" onclick="location.href = 'https://github.com/LucHutton/wryte'">
+      github
+    </p>
+    <p id="zen-toggle" onclick="zenOn()">
+      zen
+    </p>
+  </nav>
+  <nav id="themes">
+    <p id="theme">
+      theme:
+      <p class="white" onclick="toWhite()">
+        light
+      </p>
+      <p class="black" onclick="toBlack()">
+        dark
+      </p>
+    </p>
+  </nav>
+</body>
+
+</html>
