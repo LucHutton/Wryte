@@ -42,13 +42,11 @@ function toBlack() {
 function zenOn() {
   let ps = document.getElementsByTagName('p');
   for (let i = 1; i < ps.length; i++) {
-    if (i === 3) {
-      continue;
-    } else {
+    if (i !== 3) {
       let psi = ps[i];
-      psi.setAttribute("style", "display:" + "none")
-    }
+      psi.setAttribute("style", "display:" + "none");
   }
+}
 
   let toggle = document.getElementById("zen-toggle");
   toggle.setAttribute("onclick", "zenOff()");
@@ -57,8 +55,7 @@ function zenOn() {
 function zenOff() {
   let ps = document.getElementsByTagName('p');
   for (let i = 0; i < ps.length; i++) {
-    let psi = ps[i];
-    psi.removeAttribute("style");
+    ps[i].removeAttribute("style");
   }
 
   let toggle = document.getElementById("zen-toggle");
