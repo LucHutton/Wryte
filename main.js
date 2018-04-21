@@ -41,7 +41,8 @@ function toBlack() {
 
 function zenOn() {
   let ps = document.getElementsByTagName('p');
-  for (let i = 1; i < ps.length; i++) {
+  let i = ps.length - 1;
+  for (i; i > 0; i--) {
     if (i !== 3) {
       let psi = ps[i];
       psi.setAttribute("style", "display:" + "none");
@@ -54,7 +55,8 @@ function zenOn() {
 
 function zenOff() {
   let ps = document.getElementsByTagName('p');
-  for (let i = 0; i < ps.length; i++) {
+  let i = ps.length - 1;
+  for (i; i > 0; i--) {
     ps[i].removeAttribute("style");
   }
 
